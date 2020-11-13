@@ -6,7 +6,9 @@ namespace Filwords.Menu
     {
         static void Main()
         {
-            MenuScreen.Print();     
+            Console.CursorVisible = false;
+            MenuScreen.PrintMenu(ConsoleColor.White, ConsoleColor.White, ConsoleColor.White, ConsoleColor.White);
+            MenuSelect.Select();
         } 
     }
 }
