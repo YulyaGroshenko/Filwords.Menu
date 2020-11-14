@@ -64,7 +64,11 @@ namespace Filwords.Menu
                 }
                 else if (key.Key == ConsoleKey.Enter)
                 {
-                    if (i == 2)
+                    if (i == 1)
+                    {
+                        MenuNewGame.WriteName();
+                    }
+                    else if (i == 2)
                     {
                         DoPlug("Resume");
                     }
