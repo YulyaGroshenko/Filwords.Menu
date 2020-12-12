@@ -68,12 +68,8 @@ namespace Filwords.Menu
                 {
                     if (i == 2)
                     {
-                        while (key.Key == ConsoleKey.UpArrow || key.Key == ConsoleKey.W ||
-                               key.Key == ConsoleKey.DownArrow || key.Key == ConsoleKey.S)
-                        {
-                            DoPlug("Resume");
-                        }
-               
+                        DoPlug("Resume");
+
                     }
                     else if (i == 3)
                     {
