@@ -5,8 +5,7 @@ using System.Text;
 namespace Filwords.Menu
 {
     class MenuScreen
-    {
-       
+    { 
         public static void PrintMenu(ConsoleColor colorNewGame, ConsoleColor colorResume, ConsoleColor colorRating, ConsoleColor colorExit)
         {
             string name = "F I L L W O R D S";

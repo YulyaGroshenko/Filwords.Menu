@@ -37,6 +37,7 @@ namespace Filwords.Menu
                         MenuScreen.PrintMenu(ConsoleColor.White, ConsoleColor.White, ConsoleColor.Red, ConsoleColor.White);
                         i = 3;
                     }
+                   
                     
                 }
                 else if (key.Key == ConsoleKey.DownArrow || key.Key == ConsoleKey.S)
@@ -61,16 +62,27 @@ namespace Filwords.Menu
                         MenuScreen.PrintMenu(ConsoleColor.Red, ConsoleColor.White, ConsoleColor.White, ConsoleColor.White);
                         i = 1;
                     }
+                    
                 }
                 else if (key.Key == ConsoleKey.Enter)
                 {
                     if (i == 2)
                     {
-                        DoPlug("Resume");
+                        while (key.Key == ConsoleKey.UpArrow || key.Key == ConsoleKey.W ||
+                               key.Key == ConsoleKey.DownArrow || key.Key == ConsoleKey.S)
+                        {
+                            DoPlug("Resume");
+                        }
+               
                     }
                     else if (i == 3)
                     {
                         DoPlug("Rating");
+                        
+                    }
+                    else if (i == 4)
+                    {
+                        Environment.Exit(0);
                     }
                 }
    
@@ -83,6 +95,7 @@ namespace Filwords.Menu
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"One day, {menuItem} will definitely appear here.");
             Console.ResetColor();
+            
         }
     }
 }
